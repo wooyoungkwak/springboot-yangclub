@@ -1,0 +1,77 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views
+      suffix: .jsp
+  devtools:
+    livereload:
+      enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+logging:
+  config: classpath:log4j2.xml
+debug: false
+file:
+  templateLocation: classpath:/templates/
+  staticLocation: classpath:/static/
+  resourceUri: /fileUpload/**
+  resourceLocation: D:/fileUpload/
+---
+# debug (mssql)
+spring:
+  config:
+    activate:
+      on-profile: debug
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=barowork-basic;trustServerCertificate=true;encrypt=true;
+    username: sa
+    password: rudnf12dnjf
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    session:
+      timeout: 300m
+---
+# debug2 (mysql)
+spring:
+  config:
+    activate:
+      on-profile: debug2
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  datasource:
+    url: jdbc:mysql://192.168.0.14:3306/barowork_basic?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: rudnf12DNJF!@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    session:
+      timeout: 300m
+---
+# release
+spring:
+  config:
+    activate:
+      on-profile: release
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=barowork-basic;trustServerCertificate=true;encrypt=true;
+    username: sa
+    password: rudnf12dnjf
+server:
+  port: 80
+  servlet:
+    context-path: /
+    session:
+      timeout: 30m

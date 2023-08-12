@@ -1,0 +1,49 @@
+.box {
+    width: 1024px;
+    height: 768px;
+    border: black solid 2px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 0px 30px;
+
+    position: absolute;
+    top: calc(50vh - 384px);
+    left: calc(50vw - 512px);
+}
+
+.register-box {
+    float: left;
+    width: 50%;
+    height: inherit;
+}
+
+.image-box {
+    float: right;
+    width: 50%;
+    height: inherit;
+    margin-top: 10px;
+    background-image: url("/resources/assets/register.png");
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: center;
+}
+
+.description-box {
+    width: inherit;
+    height: 100px;
+}
+
+.label-box {
+    width: inherit;
+    height: 80px;
+}
+
+.btn-box {
+    width: inherit;
+    height: 100px;
+}
+
+.spare-box {
+    width: inherit;
+    height: 10px;
+}

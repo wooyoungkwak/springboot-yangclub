@@ -1,0 +1,48 @@
+.box {
+    width: 600px;
+    height: 600px;
+    border: black solid 2px;
+    border-radius: 10px 10px 0px 0px;
+    display: inline-block;
+
+    padding: 0px 30px;
+
+    position: absolute;
+    top: calc(50vh - 300px);
+    left: calc(50vw - 300px);
+}
+
+.image-box {
+    width: inherit;
+    height: 190px;
+    margin-top: 10px;
+    background-image: url("/resources/assets/login_image.png");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: center;
+}
+
+.description-box {
+    width: inherit;
+    height: 100px;
+}
+
+.id-box {
+    width: inherit;
+    height: 80px;
+}
+
+.pw-box {
+    width: inherit;
+    height: 80px;
+}
+
+.btn-box {
+    width: inherit;
+    height: 120px;
+}
+
+.spare-box {
+    width: inherit;
+    height: 10px;
+}

@@ -1,0 +1,111 @@
+
+.p0 {
+    padding: 0px;
+}
+
+.m0 {
+    margin: 0px;
+}
+
+.mb-1 {
+    margin-bottom: 1px;
+}
+.mb-2 {
+    margin-bottom: 2px;
+}
+.mb-3 {
+    margin-bottom: 3px;
+}
+.mb-4 {
+    margin-bottom: 4px;
+}
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.pb-1 {
+    padding-bottom: 1px;
+}
+.pb-2 {
+    padding-bottom: 2px;
+}
+.pb-3 {
+    padding-bottom: 3px;
+}
+.pb-4 {
+    padding-bottom: 4px;
+}
+.pb-5 {
+    padding-bottom: 5px;
+}
+
+.color-hint {
+    color: #818181;
+}
+
+
+.btn-primary {
+    width: calc(100% - 10px);
+    height: 40px;
+    border: solid 1px azure;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+
+    display: inline-block;
+    background: #7296c0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: darkcyan;
+}
+
+.btn-second {
+    width: calc(100% - 10px);
+    height: 40px;
+    border: solid 1px azure;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+
+    display: inline-block;
+    background: #818181;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-second:hover {
+    background: #2a2a2a;
+}
+
+.input-text {
+    width: calc(100% - 10px);
+    height: 40px;
+    margin: 5px;
+    display: inline-block;
+    background: #e3e2e2;
+    border: azure;
+}
+
+.input-text:focus, .input-text:hover {
+    background-color: white;
+    border: #2a2a2a solid 2px;
+}
+
+.input-label {
+    font-size: 1.1em;
+    color: #818181;
+    font-weight: bold;
+    margin-left: 5px;
+}
