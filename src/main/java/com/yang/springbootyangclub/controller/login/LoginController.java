@@ -1,6 +1,7 @@
 package com.yang.springbootyangclub.controller.login;
 
 import com.yang.springbootyangclub.controller.BaseController;
+import com.yang.springbootyangclub.libs.exceptions.YoungException;
 import com.yang.springbootyangclub.model.entity.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -27,20 +28,26 @@ public class LoginController extends BaseController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public RedirectView redirect() {
-
         return new RedirectView("/login/login");
     }
 
     @RequestMapping(value = "/login/login", method = RequestMethod.GET)
-    public String login(Model model, HttpServletRequest request) {
-
-        return  getPath("/login");
+    public String login(Model model, HttpServletRequest request) throws YoungException {
+        try {
+            return getPath("/login");
+        } catch (Exception e) {
+            throw new YoungException(e);
+        }
     }
 
     @RequestMapping(value = "/login/register", method = RequestMethod.GET)
-    public String register() {
+    public String register() throws YoungException {
+        try {
+            return getPath("/register");
+        } catch (Exception e) {
+            throw new YoungException(e);
+        }
 
-        return  getPath("/register");
     }
 
 }

@@ -1,4 +1,4 @@
-package com.yang.springbootyangclub.exception;
+package com.yang.springbootyangclub.libs.exceptions;
 
 /**
  * package name : com.yang.springbootyangclub.exception
@@ -13,11 +13,11 @@ public class YoungException extends Exception{
         super(message);
     }
 
-    public YoungException(String message, ExceptionCode code) {
+    public YoungException(String message, YoungExceptionCode code) {
         super(message + " /n" + code.getValue());
     }
 
-    public YoungException(ExceptionCode code) {
+    public YoungException(YoungExceptionCode code) {
         super(code.getValue());
     }
 
@@ -25,7 +25,7 @@ public class YoungException extends Exception{
         super(e);
     }
 
-    public YoungException(ExceptionCode code, Throwable e) {
+    public YoungException(YoungExceptionCode code, Throwable e) {
         super(code.getValue(), e);
     }
 

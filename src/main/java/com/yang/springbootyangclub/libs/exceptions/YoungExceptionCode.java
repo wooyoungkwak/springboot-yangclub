@@ -1,4 +1,4 @@
-package com.yang.springbootyangclub.exception;
+package com.yang.springbootyangclub.libs.exceptions;
 
 import lombok.Getter;
 
@@ -10,16 +10,17 @@ import lombok.Getter;
  * Description :
  */
 @Getter
-public enum ExceptionCode {
+public enum YoungExceptionCode {
 
-    EXCEPTION_404("페이지를 찾을 수 없습니다."),
+    VIEW_404("페이지를 찾을 수 없습니다."),
 
-    EXCEPTION_405("허용되지 않는 메서드를 요청 하고 있습니다.")
+    VIEW_405("허용되지 않는 메서드를 요청 하고 있습니다.")
+
     ;
 
     private String value;
 
-    ExceptionCode(String _value) {
+    YoungExceptionCode(String _value) {
         this.value = _value;
     }
 

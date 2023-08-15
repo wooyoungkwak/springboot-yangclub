@@ -38,9 +38,10 @@ task initFile(dependsOn: ['createYML', 'createLog4j'], description: " create dir
             String javaDir = rootDir + '\\' + packageDir + '\\' + this.name.toString().replace('-', '')
 
             [
-                    new File(javaDir, '/aop'), new File(javaDir, '/controller'), new File(javaDir, '/encrypt'), new File(javaDir, '/exception'),
+                    new File(javaDir, '/aop'), new File(javaDir, '/controller'), new File(javaDir, '/libs'),new File(javaDir, '/exception'),
                     new File(javaDir, '/interceptor'), new File(javaDir, '/model'), new File(javaDir, '/scheduler'), new File(javaDir, '/security'),
                     new File(javaDir, '/config'),
+                    new File(javaDir, '/libs/encrypts'), new File(javaDir, '/libs/exceptions'), new File(javaDir, '/libs/annotations'),
                     new File(javaDir, '/model/dto'), new File(javaDir, '/model/entity'), new File(javaDir, '/model/mapper')
             ].each {
                 if (!it.exists()) it.mkdirs()
