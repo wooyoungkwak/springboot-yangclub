@@ -48,7 +48,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   datasource:
-    url: jdbc:mysql://192.168.0.14:3306/barowork_basic?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://192.168.0.2:3306/barowork_basic?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: rudnf12DNJF!@
 server:

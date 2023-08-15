@@ -13,6 +13,8 @@
         <title>회원가입</title>
         <link href="<%=contextPath%>/resources/css/yang/register.css" rel="stylesheet">
         <link href="<%=contextPath%>/resources/css/yang/base.css" rel="stylesheet">
+        <script src="<%=contextPath%>/resources/js/base.js" />
+        <script src="<%=contextPath%>/resources/js/login/register.js" />
     </head>
     <body>
         <div class="box">
@@ -43,25 +45,25 @@
                 <div class="label-box">
                     <label class="input-label" for="name"> 이름: </label>
                     </br>
-                    <input type="password" class="input-text" id="name" placeholder="이름을 입력하세요.">
+                    <input type="text" class="input-text" id="name" placeholder="이름을 입력하세요.">
                 </div>
 
                 <div class="label-box">
                     <label class="input-label" for="email"> e-mail: </label>
                     </br>
-                    <input type="password" class="input-text" id="email" placeholder="E-mail 를 입력하세요.">
+                    <input type="text" class="input-text" id="email" placeholder="E-mail 를 입력하세요.">
                 </div>
 
                 <div class="label-box">
                     <label class="input-label" for="phone"> 연락처: </label>
                     </br>
-                    <input type="password" class="input-text" id="phone" placeholder="연락처를 입력하세요.">
+                    <input type="text" class="input-text" id="phone" placeholder="연락처를 입력하세요.">
                 </div>
 
                 <div class="label-box">
                     <label class="input-label" for="address"> 주소: </label>
                     </br>
-                    <input type="password" class="input-text" id="address" placeholder="주소를 입력하세요.">
+                    <input type="text" class="input-text" id="address" placeholder="주소를 입력하세요.">
                 </div>
 
                 <div class="spare-box m0 p0"></div>

@@ -1,5 +1,7 @@
 package com.yang.springbootyangclub.controller.login;
 
+import com.yang.springbootyangclub.AnnotationSample;
+import com.yang.springbootyangclub.PropertiesSample;
 import com.yang.springbootyangclub.controller.BaseController;
 import com.yang.springbootyangclub.libs.exceptions.YoungException;
 import com.yang.springbootyangclub.model.entity.user.service.UserService;
@@ -24,7 +26,9 @@ import javax.servlet.http.HttpServletRequest;
 @RequiredArgsConstructor
 public class LoginController extends BaseController {
 
-    private final UserService userService;
+    private final AnnotationSample annotationSample;
+
+    private final PropertiesSample propertiesSample;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public RedirectView redirect() {
@@ -34,6 +38,8 @@ public class LoginController extends BaseController {
     @RequestMapping(value = "/login/login", method = RequestMethod.GET)
     public String login(Model model, HttpServletRequest request) throws YoungException {
         try {
+            annotationSample.printAnnotation();
+            System.out.println(propertiesSample.getUsername() + " :: " + propertiesSample.getPassword());
             return getPath("/login");
         } catch (Exception e) {
             throw new YoungException(e);
