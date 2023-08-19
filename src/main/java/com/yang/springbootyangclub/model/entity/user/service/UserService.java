@@ -19,4 +19,6 @@ public interface UserService {
     User set(User user);
 
     List<User> sets(List<User> users);
+
+    boolean isUser(String id, String password);
 }
