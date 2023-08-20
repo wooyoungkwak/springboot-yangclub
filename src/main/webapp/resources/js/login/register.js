@@ -32,7 +32,7 @@ $(function () {
 
     $('#register').on('click', function () {
         let data = getData();
-        if (data == true) {
+        if (data === true) {
             return;
         }
 
@@ -40,12 +40,14 @@ $(function () {
             type: 'post',
             url: '/login/register',
             data: data,
-            done: function (data, status) {
-                alert("등록되었습니다.");
+            done: function (resultData, status) {
+                console.log(resultData.status);
+                console.log(resultData.data);
+                alert("등록되었습니다. ");
                 load("/login");
             },
-            fail: function (data, status) {
-                alert("등록 실패하였습니다. (" + data + ")");
+            fail: function (resultData, status) {
+                alert("등록 실패하였습니다. (" + resultData.message + ")");
             }
         });
     });

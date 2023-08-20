@@ -23,7 +23,8 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    implementation 'org.projectlombok:lombok:1.18.22'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
