@@ -11,10 +11,10 @@
 <html>
     <head>
         <title>로그인</title>
-        <link href="<%=contextPath%>/resources/css/yang/login.css" rel="stylesheet">
-        <link href="<%=contextPath%>/resources/css/yang/base.css" rel="stylesheet">
-
+        <link href="<%=contextPath%>/resources/css/login/login.css" rel="stylesheet">
+        <link href="<%=contextPath%>/resources/css/base.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="application/javascript" src="<%=contextPath%>/resources/js/base.js"></script>
     </head>
     <body>
         <div class="box">
@@ -51,7 +51,5 @@
         </div>
     </body>
 
-    <script type="application/javascript">
-
-    </script>
+    <script type="application/javascript" src="<%=contextPath%>/resources/js/login/login.js"></script>
 </html>

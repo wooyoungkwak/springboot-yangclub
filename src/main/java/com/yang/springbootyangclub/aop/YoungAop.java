@@ -1,11 +1,11 @@
 package com.yang.springbootyangclub.aop;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yang.springbootyangclub.libs.utils.ObjectMapperUtil;
+import com.yang.springbootyangclub.libs.utils.JsonUtil;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 /**
@@ -31,23 +31,33 @@ public class YoungAop {
      *
      */
 
-    private ObjectMapper objectMapper = new ObjectMapper();
-
-    @Pointcut(value = " execution(* com.yang.springbootyangclub.controller..*PostController.*(..) )")
-    private String controllerPointCut(ProceedingJoinPoint joinPoint) {
+    @Around(value = " execution(* com.yang.springbootyangclub.controller..*PostController.*(..) )")
+    private Object controllerPointCut(ProceedingJoinPoint joinPoint) {
         ResultData resultData = new ResultData();
 
         try {
-            resultData.data = ObjectMapperUtil.objectToJsonStr(objectMapper, joinPoint.proceed());
+            // ==================================
+            // if bebore process
+            // ..
+            // ==================================
+
+            resultData.data = JsonUtil.toString(joinPoint.proceed());
             resultData.status = "success";
             resultData.message = "";
+
+            // ==================================
+            // if after prcocess
+            // ..
+            // ==================================
+
         } catch (Throwable e) {
             resultData.data = "";
             resultData.status = "fail";
             resultData.message = e.getMessage();
             e.printStackTrace();
         } finally {
-            return ObjectMapperUtil.objectToJsonStr(objectMapper, resultData);
+            return JsonUtil.toString(resultData);
         }
     }
+
 }

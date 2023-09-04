@@ -9,6 +9,7 @@ public class GeneralConfig {
 
     @Bean
     public ObjectMapper objectMapper(){
+
         return new ObjectMapper();
     }
 }

@@ -18,4 +18,5 @@ import java.lang.annotation.Target;
 public @interface YoungAnnotation {
     String value() default "";
     String version() default "1.0.0";
+
 }

@@ -5,8 +5,8 @@ $(function () {
         let password = $('#pw').val();
         let name = $('#name').val();
         let email = $('#email').val();
-        let phone = $('#phone').val();
-        let address = $('#address').val();
+        let hp = $('#hp').val();
+        let fax = $('#fax').val();
 
         if (id.length === 0) {
             alert("ID 를 입력하세요.");
@@ -23,8 +23,8 @@ $(function () {
             password: password,
             name: name,
             email: email,
-            phone: phone,
-            address: address,
+            hp: hp,
+            fax: fax,
         }
 
         return data;
@@ -32,22 +32,26 @@ $(function () {
 
     $('#register').on('click', function () {
         let data = getData();
+
         if (data === true) {
             return;
         }
 
-        base.ajax({
+        $.fn.ajaxJJ({
             type: 'post',
             url: '/login/register',
-            data: data,
+            data: JSON.stringify(data),
             done: function (resultData, status) {
-                console.log(resultData.status);
-                console.log(resultData.data);
-                alert("등록되었습니다. ");
-                load("/login");
+                console.log(JSON.stringify(resultData));
+                if (resultData.data == "true" ) {
+                    alert("등록되었습니다. ");
+                } else {
+                    alert(resultData.message);
+                }
+                // load("/login");
             },
             fail: function (resultData, status) {
-                alert("등록 실패하였습니다. (" + resultData.message + ")");
+                alert("등록 실패하였습니다. (  " + JSON.stringify(resultData) + "  ) :: status = " + status);
             }
         });
     });

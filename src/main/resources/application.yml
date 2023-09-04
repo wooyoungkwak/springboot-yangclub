@@ -21,6 +21,10 @@ file:
   staticLocation: classpath:/static/
   resourceUri: /fileUpload/**
   resourceLocation: D:/fileUpload/
+rdbms:
+  type: MSSQL
+  # MYSQL / MSSQL / ORACLE
+
 ---
 # debug (mssql)
 spring:

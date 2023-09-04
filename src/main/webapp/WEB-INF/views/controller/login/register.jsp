@@ -11,11 +11,12 @@
 <html>
     <head>
         <title>회원가입</title>
-        <link href="<%=contextPath%>/resources/css/yang/register.css" rel="stylesheet">
-        <link href="<%=contextPath%>/resources/css/yang/base.css" rel="stylesheet">
-        <script src="<%=contextPath%>/resources/js/base.js" />
-        <script src="<%=contextPath%>/resources/js/login/register.js" />
+        <link href="<%=contextPath%>/resources/css/register/register.css" rel="stylesheet" />
+        <link href="<%=contextPath%>/resources/css/base.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="<%=contextPath%>/resources/js/base.js" ></script>
     </head>
+
     <body>
         <div class="box">
             <div class="register-box">
@@ -55,15 +56,15 @@
                 </div>
 
                 <div class="label-box">
-                    <label class="input-label" for="phone"> 연락처: </label>
+                    <label class="input-label" for="hp"> 연락처: </label>
                     </br>
-                    <input type="text" class="input-text" id="phone" placeholder="연락처를 입력하세요.">
+                    <input type="text" class="input-text" id="hp" placeholder="연락처를 입력하세요.">
                 </div>
 
                 <div class="label-box">
-                    <label class="input-label" for="address"> 주소: </label>
+                    <label class="input-label" for="fax"> 팩스: </label>
                     </br>
-                    <input type="text" class="input-text" id="address" placeholder="주소를 입력하세요.">
+                    <input type="text" class="input-text" id="fax" placeholder="팩스 번호를 입력하세요.">
                 </div>
 
                 <div class="spare-box m0 p0"></div>
@@ -76,5 +77,6 @@
             <div class="image-box"></div>
         </div>
     </body>
+    <script src="<%=contextPath%>/resources/js/login/register.js" /></script>
 
 </html>

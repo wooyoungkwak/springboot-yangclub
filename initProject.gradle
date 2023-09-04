@@ -16,7 +16,7 @@ ext.RDMBS = [
         ORACLE: "ORACLE"
 ]
 
-ext.typeOfRDMBS = RDMBS.MYSQL                       // select to RDBMS
+ext.typeOfRDMBS = "MSSQL"                       // select to RDBMS
 
 ext.hostOfDEBUG = "localhost"                       // database host name for DEBUG Profile
 ext.databaseNameOfDEBUG = "sample"                  // database name for DEBUG Profile

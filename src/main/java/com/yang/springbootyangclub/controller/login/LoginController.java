@@ -49,6 +49,7 @@ public class LoginController extends BaseController {
     @RequestMapping(value = "/login/register", method = RequestMethod.GET)
     public String register() throws YoungException {
         try {
+            System.out.println(" ********************* register ");
             return getPath("/register");
         } catch (Exception e) {
             throw new YoungException(e);
